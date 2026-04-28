@@ -78,12 +78,8 @@ export default function App() {
   };
 
   if (data.length === 0) {
-  return (
-    <div style={{ padding: "40px" }}>
-      <h1>Uploader should be here ⚠️</h1>
-    </div>
-  );
-}
+    return <FileUploader onDataLoaded={handleDataLoaded} />;
+  }
 
   const previousMetrics = uploadHistory[1]?.metrics || null;
 
